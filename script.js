@@ -1,13 +1,23 @@
 
-let counter=0;
-const counterValue = document.getElementById('counter');
-const incrementBtn = document.getElementById('incrementBtn');
+const counterElement = document.getElementById('counter');
 
- 
-// To increment the value of counter
-incrementBtn.addEventListener('click', () => {
-    counter++;
-	alert(`${counter}`)
-    counterValue.innerHTML = counter;
-	
-});
+  // Get the increment button
+  const incrementBtn = document.getElementById('incrementBtn');
+
+  // Counter variable
+  let counterValue = 0;
+
+  // Update the counter value in the paragraph
+  function updateCounter() {
+    counterElement.textContent = `Counter: ${counterValue}`;
+  }
+
+  // Display the un-incremented value in an alert and increment the counter
+  incrementBtn.addEventListener('click', function () {
+    alert(`Un-incremented Value: ${counterValue}`);
+    counterValue++;
+    updateCounter();
+  });
+
+  // Initialize the counter value
+  updateCounter();
