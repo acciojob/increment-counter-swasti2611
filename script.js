@@ -5,7 +5,8 @@ const incrementBtn = document.getElementById('incrementBtn');
 
  
 // To increment the value of counter
-incrementBtn.addEventListener('click', () => {
+incrementBtn.addEventListener('click', (event) => {
+	event.preventDefault()
 	 alert(`${counter}`);
     counter=counter+1;
 	
