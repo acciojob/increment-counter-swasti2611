@@ -6,10 +6,11 @@ const incrementBtn = document.getElementById('incrementBtn');
  
 // To increment the value of counter
 incrementBtn.addEventListener('click', () => {
+	 alert(`${counter}`);
     counter=counter+1;
 	
 	
 	counterValue.innerHTML = counter;
-    alert(`${counter}`);
+   
 	
 });
